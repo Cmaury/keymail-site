@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Keymail — Keyboard-first email for macOS</title>
-<meta name="description" content="Keymail is a keyboard-first native macOS Gmail client with a unified multi-account inbox, customizable shortcuts, and a follow-up radar.">
+<title>Chris Maury — Apps</title>
+<meta name="description" content="Native macOS apps by Chris Maury, including Keymail and Outbox.">
 <style>
   :root {
     --bg: #0f1115;
@@ -13,7 +13,6 @@
     --text: #e8eaf0;
     --muted: #9aa3b2;
     --accent: #6ea8fe;
-    --kbd-bg: #21262f;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -24,176 +23,87 @@
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
   .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
-  header.site {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 20px 0; border-bottom: 1px solid var(--border);
-  }
+  header.site { padding: 20px 0; border-bottom: 1px solid var(--border); }
+  header.site .wrap { display: flex; align-items: center; justify-content: space-between; }
   .logo { font-weight: 700; font-size: 1.15rem; letter-spacing: .02em; }
   .logo span { color: var(--accent); }
   nav a { margin-left: 20px; color: var(--muted); font-size: .95rem; }
   nav a:hover { color: var(--text); }
-  .hero { padding: 72px 0 48px; }
-  .hero h1 { font-size: 2.4rem; line-height: 1.2; margin-bottom: 16px; }
-  .hero p.tagline { font-size: 1.2rem; color: var(--muted); max-width: 40em; }
-  kbd {
-    background: var(--kbd-bg); border: 1px solid var(--border); border-bottom-width: 2px;
-    border-radius: 5px; padding: 1px 7px; font: 0.85em ui-monospace, "SF Mono", Menlo, monospace;
+  .hero { padding: 64px 0 32px; }
+  .hero h1 { font-size: 2.2rem; line-height: 1.2; margin-bottom: 14px; }
+  .hero p { font-size: 1.15rem; color: var(--muted); max-width: 42em; }
+  .apps { padding: 24px 0 56px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+  .app-card {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 24px;
+    display: flex; flex-direction: column;
   }
-  section { padding: 40px 0; border-top: 1px solid var(--border); }
-  h2 { font-size: 1.4rem; margin-bottom: 18px; }
-  h3 { font-size: 1.05rem; margin: 22px 0 8px; }
-  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
-  .card {
-    background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 18px;
-  }
-  .card h3 { margin: 0 0 8px; }
-  .card p { color: var(--muted); font-size: .95rem; }
-  p + p, ul { margin-top: 12px; }
-  ul { padding-left: 22px; }
-  li { margin: 8px 0; }
-  li, section > .wrap > p { color: var(--muted); }
-  li strong, p strong { color: var(--text); }
-  .scope-table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: .95rem; }
-  .scope-table th, .scope-table td {
-    text-align: left; padding: 10px 12px; border: 1px solid var(--border); vertical-align: top;
-  }
-  .scope-table th { background: var(--panel); }
-  .scope-table td { color: var(--muted); }
-  .scope-table code { font: .85em ui-monospace, "SF Mono", Menlo, monospace; color: var(--text); word-break: break-all; }
-  .notice {
-    background: var(--panel); border: 1px solid var(--border); border-left: 3px solid var(--accent);
-    border-radius: 8px; padding: 16px 18px; margin-top: 20px; color: var(--muted); font-size: .95rem;
-  }
+  .app-card h2 { font-size: 1.3rem; margin-bottom: 6px; }
+  .app-card .kicker { color: var(--accent); font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 12px; }
+  .app-card p { color: var(--muted); font-size: .97rem; flex: 1; }
+  .app-links { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .92rem; }
+  .app-links a.primary { font-weight: 600; }
   footer { border-top: 1px solid var(--border); padding: 28px 0 48px; color: var(--muted); font-size: .9rem; }
-  footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
 </style>
 </head>
 <body>
 
 <header class="site">
-  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;">
-    <div class="logo">Key<span>mail</span></div>
+  <div class="wrap">
+    <div class="logo">chrismaury<span>.apps</span></div>
     <nav>
-      <a href="#features">Features</a>
-      <a href="#google-data">Google data use</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms</a>
+      <a href="mailto:help@chrismaury.com">Contact</a>
     </nav>
   </div>
 </header>
 
 <div class="hero">
   <div class="wrap">
-    <h1>Keyboard-first email for macOS.</h1>
-    <p class="tagline">
-      Keymail is a native macOS email client for Gmail. One unified inbox across all
-      your accounts, every command on a rebindable shortcut, and a follow-up radar
-      that resurfaces the messages you sent but never heard back on.
+    <h1>Apps by Chris Maury</h1>
+    <p>
+      Native macOS apps built around email, calendar, and getting things done —
+      designed to run locally on your machine and keep your data yours.
     </p>
   </div>
 </div>
 
-<section id="features">
-  <div class="wrap">
-    <h2>What Keymail does</h2>
-    <div class="features">
-      <div class="card">
-        <h3>Unified inbox</h3>
-        <p>Read, triage, and search mail from multiple Gmail accounts in a single native window — no browser tabs.</p>
+<div class="wrap">
+  <div class="apps">
+    <div class="app-card">
+      <div class="kicker">macOS · Gmail client</div>
+      <h2>Keymail</h2>
+      <p>
+        Keyboard-first email for macOS. A unified inbox across multiple Gmail
+        accounts, fully rebindable shortcuts, label tabs, and a follow-up radar
+        that resurfaces messages you sent but never heard back on.
+      </p>
+      <div class="app-links">
+        <a class="primary" href="keymail/">Open →</a>
+        <a href="keymail/privacy.html">Privacy</a>
+        <a href="keymail/terms.html">Terms</a>
       </div>
-      <div class="card">
-        <h3>Fully rebindable shortcuts</h3>
-        <p>Every command in the app can be driven from the keyboard, and every binding is customizable in Settings.</p>
-      </div>
-      <div class="card">
-        <h3>Label tabs</h3>
-        <p>Pin the labels you live in to the top navigation and cycle through them with <kbd>Tab</kbd> / <kbd>Shift-Tab</kbd>.</p>
-      </div>
-      <div class="card">
-        <h3>Follow-up radar</h3>
-        <p>Keymail automatically surfaces threads where you sent the last message and never got a reply, so nothing slips.</p>
-      </div>
-      <div class="card">
-        <h3>Compose &amp; send</h3>
-        <p>Write replies and new messages without leaving the keyboard, and send them through your own Gmail account.</p>
-      </div>
-      <div class="card">
-        <h3>Calendar aware</h3>
-        <p>See your Google Calendar schedule alongside your mail and respond to invitations directly from the app.</p>
+    </div>
+
+    <div class="app-card">
+      <div class="kicker">macOS · Meetings &amp; tasks</div>
+      <h2>Outbox</h2>
+      <p>
+        A macOS assistant for meetings, email, and follow-through. Connects your
+        Gmail (read-only) and calendar, records and transcribes meetings, and uses
+        AI to surface action items and draft follow-ups — all with your own AI key.
+      </p>
+      <div class="app-links">
+        <a class="primary" href="outbox/">Open →</a>
+        <a href="outbox/privacy.html">Privacy</a>
+        <a href="outbox/terms.html">Terms</a>
       </div>
     </div>
   </div>
-</section>
-
-<section id="google-data">
-  <div class="wrap">
-    <h2>How Keymail uses your Google data</h2>
-    <p>
-      Keymail connects to your Google account with your explicit consent, using
-      Google's official OAuth 2.0 sign-in. You choose which accounts to connect,
-      and you can disconnect at any time. Keymail is a <strong>local application</strong>:
-      your email and calendar data are fetched directly from Google's APIs to your
-      Mac and stay on your Mac. Keymail operates no servers of its own, and your
-      data is never sent to the developer or to any third party.
-    </p>
-    <p>Keymail requests the following permissions, and uses each one only as described:</p>
-    <table class="scope-table">
-      <tr><th>Permission</th><th>What Keymail uses it for</th></tr>
-      <tr>
-        <td><code>gmail.modify</code><br>Read, label, and organize your email</td>
-        <td>Displays your inbox and labels, marks messages read/unread, archives, labels, moves, and deletes messages — always as a direct result of an action you take in the app. Message content is also read locally to power the follow-up radar (detecting sent threads with no reply). Keymail never reads your mail for advertising, profiling, or any purpose other than showing and organizing it for you.</td>
-      </tr>
-      <tr>
-        <td><code>gmail.send</code><br>Send email on your behalf</td>
-        <td>Sends messages and replies that you compose in Keymail, only when you press send. Keymail never sends email automatically or without your action.</td>
-      </tr>
-      <tr>
-        <td><code>userinfo.email</code><br>See your email address</td>
-        <td>Identifies each connected account so the unified inbox can label which account a message belongs to.</td>
-      </tr>
-      <tr>
-        <td><code>calendar.readonly</code> and <code>calendar.events</code><br>View your calendars and manage events</td>
-        <td>Shows your upcoming schedule alongside your mail and lets you respond to meeting invitations (accept, decline, tentative) and manage events from within the app.</td>
-      </tr>
-    </table>
-    <div class="notice">
-      Keymail's use and transfer of information received from Google APIs to any
-      other app will adhere to the
-      <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
-      including the Limited Use requirements.
-    </div>
-    <h3>Storage &amp; security</h3>
-    <ul>
-      <li>OAuth tokens are stored in the <strong>macOS Keychain</strong>, encrypted by the operating system.</li>
-      <li>Synced mail and calendar data are cached <strong>only on your device</strong> to make the app fast and available offline.</li>
-      <li>Disconnecting an account in Keymail deletes its local data; you can also revoke Keymail's access at any time from your
-        <a href="https://myaccount.google.com/permissions">Google Account security settings</a>.</li>
-    </ul>
-    <p>
-      For full details, read our <a href="privacy.html">Privacy Policy</a>.
-    </p>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="wrap">
-    <h2>Contact</h2>
-    <p>
-      Keymail is developed by Chris Maury. Questions about the app or how it handles
-      your data? Email <a href="mailto:help@chrismaury.com">help@chrismaury.com</a>.
-    </p>
-  </div>
-</section>
+</div>
 
 <footer>
   <div class="wrap">
-    <div>© 2026 Chris Maury · Keymail</div>
-    <div>
-      <a href="privacy.html">Privacy Policy</a> ·
-      <a href="terms.html">Terms of Service</a> ·
-      <a href="mailto:help@chrismaury.com">Contact</a>
-    </div>
-    <div>Gmail, Google Calendar, and Google are trademarks of Google LLC. Keymail is not affiliated with or endorsed by Google.</div>
+    © 2026 Chris Maury · <a href="mailto:help@chrismaury.com">help@chrismaury.com</a><br>
+    Gmail and Google are trademarks of Google LLC. These apps are independent and not affiliated with or endorsed by Google.
   </div>
 </footer>
 

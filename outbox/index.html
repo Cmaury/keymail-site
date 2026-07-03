@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Outbox — Meetings, email &amp; tasks for macOS</title>
+<meta name="description" content="Outbox is a native macOS assistant that connects your Gmail and calendar, records and transcribes meetings, and uses AI to surface action items and follow-ups.">
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #171a21;
+    --border: #262b36;
+    --text: #e8eaf0;
+    --muted: #9aa3b2;
+    --accent: #7ee0b8;
+    --kbd-bg: #21262f;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+  header.site { padding: 20px 0; border-bottom: 1px solid var(--border); }
+  header.site .wrap { display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-weight: 700; font-size: 1.15rem; letter-spacing: .02em; }
+  .logo span { color: var(--accent); }
+  nav a { margin-left: 20px; color: var(--muted); font-size: .95rem; }
+  nav a:hover { color: var(--text); }
+  .hero { padding: 72px 0 48px; }
+  .hero h1 { font-size: 2.4rem; line-height: 1.2; margin-bottom: 16px; }
+  .hero p.tagline { font-size: 1.2rem; color: var(--muted); max-width: 42em; }
+  section { padding: 40px 0; border-top: 1px solid var(--border); }
+  h2 { font-size: 1.4rem; margin-bottom: 18px; }
+  h3 { font-size: 1.05rem; margin: 22px 0 8px; }
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 18px;
+  }
+  .card h3 { margin: 0 0 8px; }
+  .card p { color: var(--muted); font-size: .95rem; }
+  p + p, ul { margin-top: 12px; }
+  ul { padding-left: 22px; }
+  li { margin: 8px 0; }
+  li, section > .wrap > p { color: var(--muted); }
+  li strong, p strong { color: var(--text); }
+  .scope-table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: .95rem; }
+  .scope-table th, .scope-table td {
+    text-align: left; padding: 10px 12px; border: 1px solid var(--border); vertical-align: top;
+  }
+  .scope-table th { background: var(--panel); }
+  .scope-table td { color: var(--muted); }
+  .scope-table code { font: .85em ui-monospace, "SF Mono", Menlo, monospace; color: var(--text); word-break: break-all; }
+  .notice {
+    background: var(--panel); border: 1px solid var(--border); border-left: 3px solid var(--accent);
+    border-radius: 8px; padding: 16px 18px; margin-top: 20px; color: var(--muted); font-size: .95rem;
+  }
+  footer { border-top: 1px solid var(--border); padding: 28px 0 48px; color: var(--muted); font-size: .9rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <div class="logo">Out<span>box</span></div>
+    <nav>
+      <a href="../">Apps</a>
+      <a href="#features">Features</a>
+      <a href="#google-data">Google data use</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>Your meetings and email, handled.</h1>
+    <p class="tagline">
+      Outbox is a native macOS assistant that connects your Gmail and calendar,
+      records and transcribes your meetings, and uses AI to surface the action items,
+      tasks, and follow-ups you'd otherwise lose track of — running locally on your Mac,
+      powered by your own AI key.
+    </p>
+  </div>
+</div>
+
+<section id="features">
+  <div class="wrap">
+    <h2>What Outbox does</h2>
+    <div class="features">
+      <div class="card">
+        <h3>Email intelligence</h3>
+        <p>Reads your Gmail (read-only) to surface what needs a response and to pull tasks and commitments out of your inbox — it never modifies or sends mail.</p>
+      </div>
+      <div class="card">
+        <h3>Meeting recording &amp; notes</h3>
+        <p>Records and transcribes your meetings on-device, then generates structured notes and summaries.</p>
+      </div>
+      <div class="card">
+        <h3>Action items &amp; tasks</h3>
+        <p>Extracts tasks and follow-ups from your email and meetings so nothing falls through the cracks.</p>
+      </div>
+      <div class="card">
+        <h3>Calendar aware</h3>
+        <p>Reads your macOS calendar to give meetings context and find availability — using Apple's on-device calendar, not a Google connection.</p>
+      </div>
+      <div class="card">
+        <h3>Bring your own AI</h3>
+        <p>AI features run through your own Anthropic (Claude) API key, stored securely in your Mac's Keychain. You are always in control of your AI provider.</p>
+      </div>
+      <div class="card">
+        <h3>Private by design</h3>
+        <p>Your data lives on your Mac and, if you choose, syncs only through your own private iCloud. Outbox has no servers of its own.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="google-data">
+  <div class="wrap">
+    <h2>How Outbox uses your Google data</h2>
+    <p>
+      Outbox connects to your Google account with your explicit consent, using
+      Google's official OAuth 2.0 sign-in. Outbox is a <strong>local application</strong>:
+      your email is fetched directly from Google's APIs to your Mac. Outbox operates
+      no servers of its own, and your Google data is never sent to the developer.
+    </p>
+    <p>Outbox requests the following permissions, and uses each one only as described:</p>
+    <table class="scope-table">
+      <tr><th>Permission</th><th>What Outbox uses it for</th></tr>
+      <tr>
+        <td><code>gmail.readonly</code><br>Read your email</td>
+        <td>Reads your Gmail messages to display and analyze them — surfacing messages that need attention and extracting tasks, action items, and meeting context. This scope is <strong>read-only</strong>: Outbox can never modify, send, delete, or otherwise change your email. Message content is never used for advertising or profiling.</td>
+      </tr>
+      <tr>
+        <td><code>userinfo.email</code><br>See your email address</td>
+        <td>Identifies the connected Google account and labels which account your mail belongs to.</td>
+      </tr>
+      <tr>
+        <td><code>userinfo.profile</code><br>See your basic profile info</td>
+        <td>Displays your name and account so you can tell connected accounts apart in the app.</td>
+      </tr>
+    </table>
+
+    <h3>AI processing</h3>
+    <p>
+      Outbox's AI features (summaries, task extraction, drafting) work by sending the
+      relevant content — which may include email text and meeting transcripts — to
+      <strong>Anthropic's Claude API</strong>, using <strong>your own Anthropic API key</strong>
+      that you provide and that is stored in your Mac's Keychain. This happens only to
+      provide the features you use in the app. This data is not used to serve
+      advertising, is not read by the developer, and is not used to train generalized AI
+      models. Anthropic processes it under
+      <a href="https://www.anthropic.com/legal/commercial-terms">its API terms</a>.
+      If you don't configure an AI key, AI features are simply off.
+    </p>
+
+    <div class="notice">
+      Outbox's use and transfer of information received from Google APIs to any other
+      app will adhere to the
+      <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+      including the Limited Use requirements.
+    </div>
+
+    <h3>Storage &amp; security</h3>
+    <ul>
+      <li>OAuth tokens and your AI API key are stored in the <strong>macOS Keychain</strong>, encrypted by the operating system.</li>
+      <li>Email-derived data (notes, tasks, extracted context) is stored <strong>locally on your Mac</strong>, and — only if you enable it — synced through <strong>your own private iCloud (CloudKit)</strong>. It is never stored on the developer's servers, because there are none.</li>
+      <li>You can revoke Outbox's access to your Google account at any time from your
+        <a href="https://myaccount.google.com/permissions">Google Account security settings</a>.</li>
+    </ul>
+    <p>
+      For full details, read our <a href="privacy.html">Privacy Policy</a>.
+    </p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p>
+      Outbox is developed by Chris Maury. Questions about the app or how it handles
+      your data? Email <a href="mailto:help@chrismaury.com">help@chrismaury.com</a>.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Chris Maury · Outbox</div>
+    <div>
+      <a href="privacy.html">Privacy Policy</a> ·
+      <a href="terms.html">Terms of Service</a> ·
+      <a href="mailto:help@chrismaury.com">Contact</a>
+    </div>
+    <div>Gmail and Google are trademarks of Google LLC. Outbox is not affiliated with or endorsed by Google.</div>
+  </div>
+</footer>
+
+</body>
+</html>

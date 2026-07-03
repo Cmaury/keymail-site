@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Outbox</title>
+<meta name="description" content="Outbox privacy policy: what Google user data the app accesses, how it is used, how AI processing works, and how your data is stored and protected.">
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #171a21;
+    --border: #262b36;
+    --text: #e8eaf0;
+    --muted: #9aa3b2;
+    --accent: #7ee0b8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  header.site { padding: 20px 0; border-bottom: 1px solid var(--border); }
+  .logo { font-weight: 700; font-size: 1.15rem; }
+  .logo span { color: var(--accent); }
+  header.site .wrap { display: flex; align-items: center; justify-content: space-between; }
+  nav a { margin-left: 20px; color: var(--muted); font-size: .95rem; }
+  nav a:hover { color: var(--text); }
+  main { padding: 48px 0 64px; }
+  h1 { font-size: 2rem; margin-bottom: 8px; }
+  .date { color: var(--muted); margin-bottom: 32px; }
+  h2 { font-size: 1.25rem; margin: 32px 0 12px; }
+  p, li { color: var(--muted); }
+  p strong, li strong { color: var(--text); }
+  p + p { margin-top: 12px; }
+  ul { padding-left: 22px; margin-top: 8px; }
+  li { margin: 8px 0; }
+  code { font: .85em ui-monospace, "SF Mono", Menlo, monospace; color: var(--text); word-break: break-all; }
+  .notice {
+    background: var(--panel); border: 1px solid var(--border); border-left: 3px solid var(--accent);
+    border-radius: 8px; padding: 16px 18px; margin: 16px 0; font-size: .95rem; color: var(--muted);
+  }
+  footer { border-top: 1px solid var(--border); padding: 28px 0 48px; color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <div class="logo"><a href="index.html" style="color:inherit">Out<span>box</span></a></div>
+    <nav>
+      <a href="../">Apps</a>
+      <a href="index.html">Home</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+  <h1>Privacy Policy</h1>
+  <p class="date">Effective date: July 3, 2026</p>
+
+  <p>
+    Outbox ("the app") is a native macOS application developed by Chris Maury
+    ("we", "us"). This policy explains what data Outbox accesses, how it is used,
+    where it is stored, and the choices you have. The short version:
+    <strong>Outbox runs on your Mac. We operate no servers, and we never receive,
+    collect, sell, or share your data.</strong> The only time your data leaves your
+    device is to Google (to fetch your email), to your own iCloud (if you enable
+    sync), and to the AI provider whose key you supply (to power AI features) — each
+    described below.
+  </p>
+
+  <h2>1. Information Outbox accesses</h2>
+  <p>
+    When you connect a Google account, Outbox asks for your consent — via Google's
+    OAuth 2.0 sign-in — to access the following Google user data:
+  </p>
+  <ul>
+    <li><strong>Your email, read-only</strong> (<code>https://www.googleapis.com/auth/gmail.readonly</code>) —
+      read access to the messages in the Gmail account you connect. Outbox cannot modify,
+      send, or delete your mail.</li>
+    <li><strong>Your email address</strong> (<code>https://www.googleapis.com/auth/userinfo.email</code>) —
+      the address identifying the connected account.</li>
+    <li><strong>Your basic profile</strong> (<code>https://www.googleapis.com/auth/userinfo.profile</code>) —
+      your name and basic account info, to distinguish connected accounts.</li>
+  </ul>
+  <p>
+    Outbox also uses data that is <strong>not</strong> Google user data: your macOS
+    calendar (via Apple's on-device EventKit, not the Google Calendar API) and audio
+    you choose to record for meeting transcription. Outbox does not collect analytics,
+    telemetry, usage tracking, or advertising identifiers.
+  </p>
+
+  <h2>2. How Outbox uses this data</h2>
+  <ul>
+    <li><strong>Understanding your inbox.</strong> Your Gmail messages are read to display them,
+      highlight messages that need attention, and extract tasks, action items, and context
+      related to your meetings and projects.</li>
+    <li><strong>Meeting notes.</strong> Meetings you record are transcribed and turned into
+      structured notes and summaries.</li>
+    <li><strong>Tasks and follow-ups.</strong> Outbox derives tasks and suggested follow-ups from
+      your email and meetings.</li>
+    <li><strong>Account identification.</strong> Your email address and profile label each connected account.</li>
+  </ul>
+  <p>
+    Outbox never uses your data for advertising and never builds advertising profiles.
+  </p>
+
+  <h2>3. AI processing</h2>
+  <p>
+    Outbox's AI features (summaries, task extraction, drafting assistance) work by
+    sending the relevant content — which may include <strong>email text and meeting
+    transcripts</strong> — to <strong>Anthropic's Claude API</strong>. This uses
+    <strong>your own Anthropic API key</strong>, which you provide and which is stored
+    only in your Mac's Keychain. Outbox sends this data solely to provide the features
+    you are using, at the moment you use them.
+  </p>
+  <ul>
+    <li>This data is <strong>not</strong> used to serve advertising.</li>
+    <li>It is <strong>not</strong> read by the developer — it goes directly from your Mac to Anthropic.</li>
+    <li>It is <strong>not</strong> used to develop, train, or improve generalized or non-personalized AI/ML models.</li>
+    <li>Anthropic processes it as a service provider under
+      <a href="https://www.anthropic.com/legal/commercial-terms">Anthropic's API terms</a> and
+      <a href="https://www.anthropic.com/legal/privacy">privacy policy</a>.</li>
+    <li>If you do not configure an AI key, no data is sent to any AI provider and AI features are disabled.</li>
+  </ul>
+
+  <div class="notice">
+    <strong>Limited Use disclosure.</strong> Outbox's use and transfer of information
+    received from Google APIs to any other app will adhere to the
+    <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+    including the Limited Use requirements. In particular, Google user data is used only to
+    provide and improve the user-facing features described above, is not transferred to
+    others except as required to provide those features (i.e., to the AI provider whose key
+    you supply) or with your consent, is not used for advertising, and is not read by humans
+    except as permitted by that policy.
+  </div>
+
+  <h2>4. Where your data is stored</h2>
+  <ul>
+    <li><strong>OAuth tokens and your AI API key</strong> are stored in the macOS Keychain, encrypted
+      by the operating system.</li>
+    <li><strong>App data</strong> — your notes, tasks, and content derived from your email and meetings —
+      is stored locally on your Mac. If you enable iCloud sync, this data also syncs through
+      <strong>your own private iCloud account (Apple CloudKit)</strong>, so it is available across your
+      devices. This is Apple's infrastructure under your control; the developer has no access to it.</li>
+    <li><strong>Nothing is stored on our servers.</strong> Outbox has no backend of its own. Your data is
+      transmitted only between your Mac and Google, your iCloud, and your chosen AI provider, over
+      encrypted (HTTPS/TLS) connections.</li>
+  </ul>
+
+  <h2>5. Sharing of data</h2>
+  <p>
+    We do not sell, rent, or share your Google user data with anyone. Because Outbox
+    has no servers, we have no copy of your data and no access to it. The only parties
+    that ever receive your data are the services you connect and control: Google (the
+    source), your own iCloud (if you enable sync), and the AI provider whose API key you
+    supply (to power AI features). None of these transfers are for advertising or resale.
+  </p>
+
+  <h2>6. Data retention and deletion</h2>
+  <ul>
+    <li>Removing a Google account from Outbox deletes its OAuth tokens from your Keychain and
+      stops all further access.</li>
+    <li>You can delete notes, tasks, recordings, and other data within the app; deleting the app
+      removes its local data from that Mac.</li>
+    <li>If iCloud sync is enabled, deletions propagate through your iCloud; you also control that data
+      directly in your Apple account.</li>
+    <li>You can revoke Outbox's access to your Google account at any time at
+      <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+    <li>Outbox never deletes or alters the mail in your Google account — its Gmail access is read-only.</li>
+  </ul>
+
+  <h2>7. Security</h2>
+  <p>
+    Outbox uses Google's official OAuth 2.0 flow with PKCE — the app never sees or
+    stores your Google password. Tokens and API keys are kept in the macOS Keychain,
+    all network communication uses TLS, and local data is protected by macOS
+    user-account security (and FileVault disk encryption, if enabled).
+  </p>
+
+  <h2>8. Children's privacy</h2>
+  <p>
+    Outbox is not directed at children under 13 and does not knowingly collect
+    personal information from children.
+  </p>
+
+  <h2>9. Changes to this policy</h2>
+  <p>
+    If we change this policy, we will update this page and the effective date above.
+    Material changes affecting how Google user data is handled will be prominently
+    disclosed before they take effect.
+  </p>
+
+  <h2>10. Contact</h2>
+  <p>
+    Questions about this policy or your data? Email
+    <a href="mailto:help@chrismaury.com">help@chrismaury.com</a>.
+  </p>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    © 2026 Chris Maury · <a href="index.html">Outbox</a> ·
+    <a href="terms.html">Terms of Service</a> ·
+    Gmail and Google are trademarks of Google LLC. Outbox is not affiliated with or endorsed by Google.
+  </div>
+</footer>
+
+</body>
+</html>
