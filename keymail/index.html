@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Keymail — Keyboard-first email for macOS</title>
 <meta name="description" content="Keymail is a keyboard-first native macOS Gmail client with a unified multi-account inbox, customizable shortcuts, and a follow-up radar.">
+<link rel="icon" href="../logo.svg" type="image/svg+xml">
 <style>
   :root {
     --bg: #0f1115;
@@ -28,8 +29,10 @@
     display: flex; align-items: center; justify-content: space-between;
     padding: 20px 0; border-bottom: 1px solid var(--border);
   }
-  .logo { font-weight: 700; font-size: 1.15rem; letter-spacing: .02em; }
+  .logo { font-weight: 700; font-size: 1.15rem; letter-spacing: .02em; display: flex; align-items: center; gap: 10px; }
   .logo span { color: var(--accent); }
+  .logo-mark { width: 28px; height: 28px; border-radius: 7px; display: block; }
+  .hero-logo { width: 88px; height: 88px; border-radius: 20px; display: block; margin-bottom: 24px; box-shadow: 0 6px 24px rgba(0,0,0,.35); }
   nav a { margin-left: 20px; color: var(--muted); font-size: .95rem; }
   nav a:hover { color: var(--text); }
   .hero { padding: 72px 0 48px; }
@@ -72,7 +75,7 @@
 
 <header class="site">
   <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;">
-    <div class="logo">Key<span>mail</span></div>
+    <div class="logo"><img src="../logo.svg" alt="" class="logo-mark">Key<span>mail</span></div>
     <nav>
       <a href="../">Apps</a>
       <a href="#features">Features</a>
@@ -85,6 +88,7 @@
 
 <div class="hero">
   <div class="wrap">
+    <img src="../logo.svg" alt="Keymail" class="hero-logo">
     <h1>Keyboard-first email for macOS.</h1>
     <p class="tagline">
       Keymail is a native macOS email client for Gmail. One unified inbox across all
