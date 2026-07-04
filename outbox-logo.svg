@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Outbox logo">
+  <rect x="16" y="16" width="480" height="480" rx="116" fill="#ffffff"/>
+  <g fill="none" stroke="#3f4045" stroke-width="22" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="164" y1="150" x2="348" y2="150"/>
+    <line x1="140" y1="196" x2="372" y2="196"/>
+    <rect x="112" y="232" width="288" height="216" rx="28"/>
+    <path d="M214 348 L252 390 L342 300"/>
+  </g>
+</svg>
